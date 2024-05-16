@@ -26,6 +26,8 @@ public class User implements UserDetails {
     @Column
     private String name;
     @Column
+    private int zonecode;
+    @Column
     private String address;
     @Column
     private String phone;

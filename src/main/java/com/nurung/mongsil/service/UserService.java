@@ -16,6 +16,8 @@ public class UserService {
     public User create(User vo){
         return userdao.save(vo);
     }
+
+
     // 로그인
 
     public User login(String id,String password,PasswordEncoder encoder){

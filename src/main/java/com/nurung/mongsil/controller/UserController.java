@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/mongsil/*")
+@CrossOrigin(origins = {"*"}, maxAge = 6000)
 public class UserController {
     @Autowired
     private UserService userService;
@@ -31,6 +32,7 @@ public class UserController {
                 .password(passwordEncoder.encode(vo.getPassword()))
                 .name(vo.getName())
                 .phone(vo.getPhone())
+                .zonecode(vo.getZonecode())
                 .address(vo.getAddress())
                 .role("ROLE_USER")
                 .build();
